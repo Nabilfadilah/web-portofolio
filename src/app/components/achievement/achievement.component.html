@@ -1,1 +1,25 @@
-<p>achievement works!</p>
+<header class="header">
+    <div class="container">
+        <h1>Piagam Penghargaan</h1>
+        <p>Kumpulan penghargaan yang telah diraih oleh Rumah Sakit kami.</p>
+    </div>
+</header>
+
+<main class="achievements">
+    <div class="container">
+        <div class="grid">
+            <div class="grid">
+                <div class="card" *ngFor="let achievement of achievements">
+                  <img [src]="achievement.image" [alt]="achievement.title">
+                  <p>{{ achievement.title }}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</main>
+
+<!-- <footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Rumah Sakit. All rights reserved.</p>
+    </div>
+</footer> -->
