@@ -7,6 +7,7 @@ import { NewsComponent } from "../../components/news/news.component";
 import { AchievementComponent } from "../../components/achievement/achievement.component";
 import { TestimonialComponent } from "../../components/testimonial/testimonial.component";
 import { FooterComponent } from "../../components/footer/footer.component";
+import { ServicesComponent } from "../../components/services/services.component";
 
 @Component({
   selector: 'app-web',
@@ -18,7 +19,8 @@ import { FooterComponent } from "../../components/footer/footer.component";
     NewsComponent,
     AchievementComponent,
     TestimonialComponent,
-    FooterComponent
+    FooterComponent,
+    ServicesComponent
   ],
   templateUrl: './web.component.html',
   styleUrl: './web.component.css'
