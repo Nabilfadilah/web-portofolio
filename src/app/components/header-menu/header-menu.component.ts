@@ -11,5 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './header-menu.component.css'
 })
 export class HeaderMenuComponent {
+  gotoDiv(page: string) {
 
+  }
 }
