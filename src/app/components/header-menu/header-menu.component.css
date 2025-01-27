@@ -9,7 +9,7 @@ mat-toolbar.header-menu-section {
 
 mat-toolbar.header-menu-section.sticky-nav .logo-text {
     /* Mengubah warna teks logo menjadi hitam ketika toolbar dalam keadaan sticky */
-    color: black;
+    color: white;
 }
 
 mat-toolbar.header-menu-section .logo {
@@ -85,12 +85,12 @@ mat-toolbar.header-menu-section .menu-btn {
 
 mat-toolbar.header-menu-section.sticky-nav .menu-btn {
     /* Mengubah warna tombol menu menjadi hitam ketika sticky */
-    color: black;
+    color: white;
 }
 
 mat-toolbar.header-menu-section.sticky-nav {
     /* Gaya toolbar saat dalam posisi sticky */
-    background-color: white; /* Warna latar toolbar putih */
+    background-color: #0b2239; /* Warna latar toolbar putih */
     position: fixed; /* Membuat toolbar tetap di atas saat scroll */
     top: 0; /* Posisi toolbar di bagian atas layar */
     animation: easeIn 150ms ease-in; /* Memberikan animasi slide-in selama 150ms */
@@ -98,7 +98,7 @@ mat-toolbar.header-menu-section.sticky-nav {
 
 mat-toolbar.header-menu-section.sticky-nav .menu-collapse .list-menu .mat-mdc-list-item span {
     /* Mengubah warna teks menu menjadi hitam saat sticky */
-    color: black;
+    color: white;
 }
 
 @keyframes easeIn {
