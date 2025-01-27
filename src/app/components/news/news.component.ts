@@ -1,9 +1,10 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { SwiperContainer } from 'swiper/element';
+import { DatFormatPipe } from '@pipes/dat-format.pipe';
 @Component({
   selector: 'app-news',
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, DatFormatPipe],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
