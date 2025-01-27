@@ -1,1 +1,18 @@
-<p>header-menu works!</p>
+<mat-toolbar class="header-menu-section">
+    <h1 class="logo-text">Logo Rumah Sakit</h1>
+    <span class="spacer"></span>
+    <button mat-icon-button class="menu-btn" aria-label="meny-btn">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="menu-collapse">
+        <mat-list role="list" class="list-menu">
+            <mat-list-item (click)="gotoDiv('beranda')"><span>Beranda</span></mat-list-item>
+            <mat-list-item (click)="gotoDiv('about')"><span>About</span></mat-list-item>
+            <mat-list-item (click)="gotoDiv('news')"><span>News</span></mat-list-item>
+            <mat-list-item (click)="gotoDiv('achievement')"><span>Achievement</span></mat-list-item>
+            <mat-list-item (click)="gotoDiv('doctor')"><span>Doctor</span></mat-list-item>
+            <mat-list-item (click)="gotoDiv('login')"><span>Login</span></mat-list-item>
+        </mat-list>
+    </div>
+</mat-toolbar>
