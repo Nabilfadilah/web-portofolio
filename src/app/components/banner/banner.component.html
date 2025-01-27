@@ -5,11 +5,24 @@
         autoplay-disable-on-interaction="false"
         effect="fade"
     >
+        <!-- bisa pakai @for(khusus array) atau *Ngfor -->
+        <!-- box syntax @for -->
+        @for (img of listImages; track $index) {
+            <swiper-slide>
+                <!-- menambah mapping image dari array images -->
+                <img [src]="img" alt="banner image" class="banner-image">
+            </swiper-slide>
+        } @empty {
+            <swiper-slide>
+                <h1>Data Kosong</h1>
+            </swiper-slide>
+        }
+
         <!-- ingat impor dulu Ngfor nya -->
-        <swiper-slide *ngFor="let img of listImages">
+        <!-- <swiper-slide *ngFor="let img of listImages"> -->
             <!-- menambah mapping image dari array images -->
-            <img [src]="img" alt="banner image" class="banner-image">
-        </swiper-slide>
+            <!-- <img [src]="img" alt="banner image" class="banner-image"> -->
+        <!-- </swiper-slide> -->
     </swiper-container>
 
     <div class="banner-overlay">
