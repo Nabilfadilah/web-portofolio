@@ -5,14 +5,10 @@
         autoplay-disable-on-interaction="false"
         effect="fade"
     >
-        <swiper-slide>
-            <img src="images/bg1.jpg" alt="banner image" class="banner-image">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="images/bg2.jpg" alt="banner image" class="banner-image">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="images/bg3.jpg" alt="banner image" class="banner-image">
+        <!-- ingat impor dulu Ngfor nya -->
+        <swiper-slide *ngFor="let img of listImages">
+            <!-- menambah mapping image dari array images -->
+            <img [src]="img" alt="banner image" class="banner-image">
         </swiper-slide>
     </swiper-container>
 
