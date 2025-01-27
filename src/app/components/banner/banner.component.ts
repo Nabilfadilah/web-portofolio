@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-banner',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  styleUrl: './banner.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class BannerComponent {
 
