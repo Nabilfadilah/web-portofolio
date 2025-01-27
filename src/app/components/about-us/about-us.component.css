@@ -1,0 +1,163 @@
+.about-section {
+    /* Warna latar belakang bagian tentang */
+    background-color: #f1f2f6;
+    /* Jarak atas dan bawah bagian */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+  
+.about-section .container {
+    /* Margin kiri dan kanan untuk mengatur lebar konten */
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+  
+.about-section .container .header-master {
+    /* Lebar dan tinggi elemen header-master */
+    width: 18rem;
+    height: auto;
+    /* Bayangan untuk memberikan efek mengambang */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+.about-section .container .row {
+    /* Menyusun elemen dalam satu baris dengan fleksibel */
+    display: flex;
+    /* Jarak vertikal antar elemen */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* Arah fleksibel adalah horizontal */
+    flex-flow: row;
+    /* Elemen disejajarkan di bagian atas */
+    align-items: start;
+    /* Jarak antar elemen */
+    gap: 2rem;
+}
+  
+.about-section .container .headmaster-speach .speach-container .speach-content {
+    /* Posisi relatif untuk elemen konten pidato */
+    position: relative;
+    /* Font: berat 400, ukuran 1.5em, tinggi baris 1.8em, dengan font Lora */
+    font: 400 1.5em/1.8em "Lora", serif;
+    /* Rata kanan-kiri (justify) untuk teks */
+    text-align: justify;
+}
+  
+.about-section .container .headmaster-speach .footer .name,
+.about-section .container .headmaster-speach .footer .role {
+    /* Menebalkan teks untuk nama dan peran */
+    font-weight: bold;
+    /* Ukuran font */
+    font-size: 1.2em;
+    /* Jenis font */
+    font-family: "Lora", serif;
+}
+  
+.about-section .container .headmaster-speach .quote {
+    /* Quote (kutipan) disembunyikan secara default */
+    display: none;
+    /* Lebar elemen */
+    width: 50px;
+}
+  
+.about-section .container .headmaster-speach .quote-container {
+    /* Membuat container kutipan menjadi fleksibel */
+    display: flex;
+}
+  
+.about-section .container .headmaster-speach .right-quote {
+    /* Mengatur elemen kutipan di kanan */
+    justify-content: end;
+}
+  
+.about-section .container .headmaster-speach .left-quote .quote {
+    /* Membalik kutipan secara vertikal */
+    transform: scaleY(-1);
+}
+  
+.about-section .container .headmaster-speach .right-quote .quote {
+    /* Membalik kutipan secara horizontal */
+    transform: scaleX(-1);
+}
+  
+@media (max-width: 1190px) {
+    .about-section
+      .container
+      .headmaster-speach
+      .speach-container
+      .speach-content {
+      /* Menyesuaikan ukuran font pada layar lebih kecil */
+      font: 400 1.3em/1.8em "Lora", serif;
+    }
+    .about-section .container {
+      /* Mengurangi margin kiri dan kanan */
+      margin-left: 8rem;
+      margin-right: 8rem;
+    }
+}
+  
+@media (max-width: 1050px) {
+    .about-section
+      .container
+      .headmaster-speach
+      .speach-container
+      .speach-content {
+      /* Ukuran font lebih kecil untuk layar lebih sempit */
+      font: 400 1.1em/1.8em "Lora", serif;
+    }
+}
+  
+@media (max-width: 900px) {
+    .about-section .container {
+      /* Margin semakin kecil untuk layar lebih kecil */
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+}
+  
+@media (max-width: 750px) {
+    .about-section .container {
+      /* Margin semakin kecil lagi */
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .about-section
+      .container
+      .headmaster-speach
+      .speach-container
+      .speach-content {
+      /* Ukuran font lebih kecil untuk layar kecil */
+      font: 400 1em/1.8em "Lora", serif;
+    }
+    .about-section .container .headmaster-speach .footer .name,
+    .about-section .container .headmaster-speach .footer .role {
+      /* Ukuran font untuk nama dan peran disesuaikan */
+      font-weight: bold;
+      font-size: 1em;
+      font-family: "Lora", serif;
+    }
+    .about-section .container .row {
+      /* Mengurangi jarak antar elemen */
+      gap: 1rem;
+    }
+    .about-section .container .header-master {
+      /* Lebar header lebih kecil */
+      width: 15rem;
+    }
+}
+  
+@media (max-width: 600px) {
+    .about-section .container .header-master {
+      /* Header disembunyikan pada layar sangat kecil */
+      display: none;
+    }
+    .about-section .container .headmaster-speach .quote {
+      /* Kutipan ditampilkan pada layar kecil */
+      display: block;
+    }
+    .about-section .container .row {
+      /* Jarak antar elemen dihapus */
+      gap: 0;
+    }
+}
+  
