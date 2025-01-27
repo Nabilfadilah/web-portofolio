@@ -1,0 +1,133 @@
+mat-toolbar.header-menu-section {
+    /* Menentukan tinggi toolbar, membuatnya transparan, dan memposisikannya absolut */
+    height: 5rem;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2; /* Memberikan prioritas tampilan toolbar di atas elemen lain */
+    animation: fadeIn 250ms ease-in; /* Memberikan animasi fade-in selama 250ms */
+}
+
+mat-toolbar.header-menu-section.sticky-nav .logo-text {
+    /* Mengubah warna teks logo menjadi hitam ketika toolbar dalam keadaan sticky */
+    color: black;
+}
+
+mat-toolbar.header-menu-section .logo {
+    /* Mengatur ukuran logo */
+    width: 4rem;
+    height: auto; /* Mempertahankan rasio aspek logo */
+}
+
+mat-toolbar.header-menu-section .logo-text {
+    /* Menambahkan gaya teks pada logo */
+    font-weight: bold;
+    color: white; /* Warna teks logo putih secara default */
+}
+
+mat-toolbar.header-menu-section .spacer {
+    /* Memberikan ruang fleksibel di antara elemen toolbar */
+    flex: 1 1 auto;
+}
+
+mat-toolbar.header-menu-section .menu-collapse {
+    /* Mengatur elemen menu agar ditampilkan dalam satu baris */
+    display: flex;
+    flex-flow: row; /* Mengatur elemen agar berjajar secara horizontal */
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu {
+    /* Mengatur tampilan menu sebagai daftar horizontal */
+    display: flex;
+    list-style-type: none; /* Menghapus tanda bullet pada daftar */
+    flex-flow: row;
+    padding: 0; /* Menghapus padding bawaan */
+    align-items: center;
+    margin: 0; /* Menghapus margin bawaan */
+    gap: 1.5rem; /* Memberikan jarak antar elemen menu */
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu mat-list-item {
+    /* Mengatur elemen daftar agar selalu terlihat */
+    overflow: visible !important;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span {
+    /* Memberikan warna teks putih pada elemen daftar */
+    color: white;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item:hover span,
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span.active {
+    /* Memberikan efek hover dan gaya aktif pada menu */
+    cursor: pointer; /* Menampilkan pointer ketika di-hover */
+    color: #009d4e !important; /* Mengubah warna teks menjadi hijau */
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span {
+    /* Menentukan gaya teks untuk elemen menu */
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 800 !important; /* Menambahkan ketebalan pada teks */
+    font-size: 14px;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu mat-list-item {
+    /* Menghapus padding default pada elemen daftar */
+    padding: 0 !important;
+}
+
+mat-toolbar.header-menu-section .menu-btn {
+    /* Mengatur tombol menu pada toolbar */
+    display: none; /* Tidak tampil secara default */
+    color: white; /* Warna tombol putih secara default */
+    border: none !important; /* Menghapus border */
+    background: transparent; /* Membuat latar belakang transparan */
+}
+
+mat-toolbar.header-menu-section.sticky-nav .menu-btn {
+    /* Mengubah warna tombol menu menjadi hitam ketika sticky */
+    color: black;
+}
+
+mat-toolbar.header-menu-section.sticky-nav {
+    /* Gaya toolbar saat dalam posisi sticky */
+    background-color: white; /* Warna latar toolbar putih */
+    position: fixed; /* Membuat toolbar tetap di atas saat scroll */
+    top: 0; /* Posisi toolbar di bagian atas layar */
+    animation: easeIn 150ms ease-in; /* Memberikan animasi slide-in selama 150ms */
+}
+
+mat-toolbar.header-menu-section.sticky-nav .menu-collapse .list-menu .mat-mdc-list-item span {
+    /* Mengubah warna teks menu menjadi hitam saat sticky */
+    color: black;
+}
+
+@keyframes easeIn {
+    /* Animasi untuk toolbar sticky (meluncur ke bawah) */
+    from {
+        transform: translateY(-100%); /* Posisi toolbar di luar layar */
+    }
+    to {
+        transform: translateY(0); /* Posisi toolbar terlihat sepenuhnya */
+    }
+}
+
+@keyframes fadeIn {
+    /* Animasi untuk perubahan warna latar toolbar */
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 730px) {
+    mat-toolbar.header-menu-section .menu-collapse {
+        /* Menyembunyikan menu saat di layar kecil */
+        display: none;
+    }
+    mat-toolbar.header-menu-section .menu-btn {
+        /* Menampilkan tombol menu saat di layar kecil */
+        display: block;
+    }
+}
