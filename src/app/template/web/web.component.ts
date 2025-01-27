@@ -4,10 +4,18 @@ import { BannerComponent } from '@components/banner/banner.component';
 import { HeaderMenuComponent } from "@components/header-menu/header-menu.component";
 import { AboutUsComponent } from "../../components/about-us/about-us.component";
 import { NewsComponent } from "../../components/news/news.component";
+import { AchievementComponent } from "../../components/achievement/achievement.component";
 
 @Component({
   selector: 'app-web',
-  imports: [HeaderComponent, BannerComponent, HeaderMenuComponent, AboutUsComponent, NewsComponent],
+  imports: [
+    HeaderComponent,
+    BannerComponent,
+    HeaderMenuComponent,
+    AboutUsComponent,
+    NewsComponent,
+    AchievementComponent
+  ],
   templateUrl: './web.component.html',
   styleUrl: './web.component.css'
 })
