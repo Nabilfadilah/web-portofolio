@@ -5,6 +5,7 @@ import { HeaderMenuComponent } from "@components/header-menu/header-menu.compone
 import { AboutUsComponent } from "../../components/about-us/about-us.component";
 import { NewsComponent } from "../../components/news/news.component";
 import { AchievementComponent } from "../../components/achievement/achievement.component";
+import { TestimonialComponent } from "../../components/testimonial/testimonial.component";
 
 @Component({
   selector: 'app-web',
@@ -14,7 +15,8 @@ import { AchievementComponent } from "../../components/achievement/achievement.c
     HeaderMenuComponent,
     AboutUsComponent,
     NewsComponent,
-    AchievementComponent
+    AchievementComponent,
+    TestimonialComponent
   ],
   templateUrl: './web.component.html',
   styleUrl: './web.component.css'
