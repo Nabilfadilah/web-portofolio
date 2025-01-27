@@ -3,6 +3,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    // menambah path alias
+    "baseUrl": "./",
+    "paths": {
+      "@components/*":["src/app/components/*"],
+      "@template/*":["src/app/template/*"],
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
