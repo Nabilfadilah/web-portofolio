@@ -1,0 +1,89 @@
+.banner-section {
+    position: relative; /* Menjadikan elemen ini sebagai kontainer untuk elemen posisional anak-anaknya. */
+}
+  
+.banner-section swiper-container.banner-swiper {
+    width: 100%; /* Swiper mengambil lebar penuh layar. */
+    height: 85svh; /* Tinggi swiper 85% dari tinggi viewport. */
+}
+  
+.banner-section swiper-container.banner-swiper swiper-slide {
+    text-align: center; /* Konten di dalam slide berada di tengah secara horizontal. */
+    font-size: 18px; /* Ukuran font default untuk konten slide. */
+    background: #fff; /* Warna latar belakang slide putih. */
+    display: flex; /* Menggunakan Flexbox untuk menyusun konten dalam slide. */
+    justify-content: center; /* Konten di tengah secara horizontal. */
+    align-items: center; /* Konten di tengah secara vertikal. */
+}
+  
+.banner-section swiper-container.banner-swiper swiper-slide img {
+    display: block; /* Menghilangkan default inline styling gambar. */
+    width: 100%; /* Gambar mengisi lebar penuh slide. */
+    height: 100%; /* Gambar mengisi tinggi penuh slide. */
+    object-fit: cover; /* Gambar dipotong atau diperbesar agar sesuai dengan dimensi slide tanpa meregang. */
+}
+  
+.banner-section swiper-container.banner-swiper {
+    --swiper-navigation-size: 20px; /* Ukuran tombol navigasi Swiper. */
+    --swiper-navigation-color: white; /* Warna tombol navigasi Swiper putih. */
+    --swiper-theme-color: #009d4e; /* Warna tema Swiper untuk elemen tertentu. */
+}
+
+.banner-section .banner-overlay,
+.banner-section .banner-overlay .banner-layer,
+.banner-section .banner-overlay .banner-description {
+    position: absolute; /* Elemen-elemen overlay diposisikan di atas swiper. */
+    width: 100%; /* Mengisi lebar penuh banner. */
+    height: 100%; /* Mengisi tinggi penuh banner. */
+}
+
+.banner-section .banner-overlay {
+    top: 0; /* Posisi overlay dari atas layar. */
+    left: 0; /* Posisi overlay dari sisi kiri layar. */
+    z-index: 1; /* Overlay memiliki prioritas lebih rendah dibanding layer lainnya. */
+}
+  
+.banner-section .banner-overlay .banner-layer {
+    background: black; /* Layer overlay berwarna hitam. */
+    z-index: 1; /* Layer ini berada di bawah deskripsi. */
+    opacity: 0.5; /* Transparansi layer sebesar 50%. */
+}
+  
+.banner-section .banner-overlay .banner-description {
+    z-index: 2; /* Deskripsi berada di atas layer overlay. */
+    display: flex; /* Menggunakan Flexbox untuk tata letak deskripsi. */
+    flex-flow: column; /* Elemen dalam deskripsi ditata secara vertikal. */
+    align-items: center; /* Konten di tengah secara horizontal. */
+    justify-content: center; /* Konten di tengah secara vertikal. */
+    text-align: center; /* Teks di tengah secara horizontal. */
+}
+  
+.banner-section .banner-overlay .banner-description h1,
+.banner-section .banner-overlay .banner-description h2 {
+    color: white; /* Teks deskripsi berwarna putih. */
+    margin: 0; /* Tidak ada margin di sekitar heading. */
+    padding-left: 15px; /* Jarak teks dari kiri 15px. */
+    padding-right: 15px; /* Jarak teks dari kanan 15px. */
+}
+
+.banner-section .banner-overlay .banner-description h1 {
+    font: 800 28px/32px "Poppins", sans-serif !important; /* Font heading utama lebih besar dan tebal. */
+}
+
+.banner-section .banner-overlay .banner-description h2 {
+    font: 800 18px/32px "Poppins", sans-serif !important; /* Font heading kedua lebih kecil tetapi tetap tebal. */
+}
+
+.banner-section .banner-overlay .banner-description .btn-pendaftaran {
+    background-color: #4cd137; /* Tombol pendaftaran berwarna hijau cerah. */
+    color: white; /* Teks tombol berwarna putih. */
+}
+
+@media (max-width: 600px) {
+    .banner-section .banner-overlay .banner-description h1 {
+        font: 800 1.5rem/32px "Poppins", sans-serif !important; /* Heading utama lebih kecil di layar kecil. */
+    }
+    .banner-section .banner-overlay .banner-description h2 {
+        font: 800 1rem/32px "Poppins", sans-serif !important; /* Heading kedua lebih kecil di layar kecil. */
+    }
+}
